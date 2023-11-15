@@ -1,0 +1,12 @@
+diff -Naur vdo-eff92d15b7e223bc0ba93fddf1486cf771e7bf17.orig/utils/vdo/user/Makefile vdo-eff92d15b7e223bc0ba93fddf1486cf771e7bf17/utils/vdo/user/Makefile
+--- vdo-eff92d15b7e223bc0ba93fddf1486cf771e7bf17.orig/utils/vdo/user/Makefile	2020-05-29 22:20:46.000000000 -0400
++++ vdo-eff92d15b7e223bc0ba93fddf1486cf771e7bf17/utils/vdo/user/Makefile	2020-06-02 19:07:57.986213915 -0400
+@@ -151,7 +151,7 @@
+ 	$(CC) $(LDFLAGS) $^ $(LDPRFLAGS) -o $@
+ 
+ vdoformat: LDPRFLAGS += "-lblkid"
+-vdodmeventd: LDPRFLAGS += "-ldevmapper-event"
++vdodmeventd: LDPRFLAGS += -ldevmapper -ldevmapper-event
+ 
+ ifneq ($(MAKECMDGOALS),clean)
+ DEPSOURCES = $(wildcard *.c)
