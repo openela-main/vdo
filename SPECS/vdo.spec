@@ -1,5 +1,5 @@
-%global commit           c1289db707c926439dbdd661476d608b10d2ec9b
-%global gittag           6.2.7.17
+%global commit           53745c3cb82498a19d9bfd901bc015094233ca76
+%global gittag           6.2.9.7
 %global shortcommit      %(c=%{commit}; echo ${c:0:7})
 
 %define spec_release 14
@@ -242,6 +242,14 @@ This package provides the user-space support tools for VDO.
 %{_mandir}/man8/vdoregenerategeometry.8.gz
 
 %changelog
+* Wed May 24 2023 - Susan LeGendre-McGhee <slegendr@redhat.com> - 6.2.9.7-14
+- Enhanced vdoPrepareForLVM to repair misaligned conversions.
+- Resolves: rhbz#2182739
+
+* Wed Apr 12 2023 - Susan LeGendre-McGhee <slegendr@redhat.com> - 6.2.9.1-14
+- Updated vdoPrepareForLVM to allow LVM to use larger extents.
+- Resolves: rhbz#2182739
+
 * Mon Jul 18 2022 - Andy Walsh <awalsh@redhat.com> - 6.2.7.17-14
 - Fixed excessive vdo2lvm "Retrying" messages.
 - Resolves: rhbz#1986595
