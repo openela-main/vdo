@@ -1,5 +1,5 @@
-%global commit           163f9d85ace03428e092b25e251e0388deb5b868
-%global gittag           8.2.0.2
+%global commit           e7a687da9e25d563838a6d2f4ca5036c80033ceb
+%global gittag           8.2.2.2
 %global shortcommit      %(c=%{commit}; echo ${c:0:7})
 
 %define spec_release 1
@@ -106,6 +106,10 @@ This package provides the user-space support tools for VDO.
 %{_mandir}/man8/vdoregenerategeometry.8.gz
 
 %changelog
+* Wed Jun 21 2023 - Susan LeGendre-McGhee - 8.2.2.2-1
+- Updated manpages.
+- Resolves: rhbz#2176778
+
 * Tue Jul 19 2022 - Andy Walsh <awalsh@redhat.com> - 8.2.0.2-1
 - Rebased to latest upstream candidate.
 - Resolves: rhbz#2071648
