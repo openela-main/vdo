@@ -1,5 +1,5 @@
-%global commit           53745c3cb82498a19d9bfd901bc015094233ca76
-%global gittag           6.2.9.7
+%global commit           116e5a51d596de8ae21a1bfd817386f536c7868f
+%global gittag           6.2.11.5
 %global shortcommit      %(c=%{commit}; echo ${c:0:7})
 
 %define spec_release 14
@@ -242,6 +242,14 @@ This package provides the user-space support tools for VDO.
 %{_mandir}/man8/vdoregenerategeometry.8.gz
 
 %changelog
+* Thu Dec 5 2024 - Chung Chung <cchung@redhat.com> - 6.2.11.5-14
+- Fixed return codes for vdoPrepareForLVM conversions.
+- Resolves: RHEL-65721
+
+* Wed Dec 4 2024 - Chung Chung <cchung@redhat.com> - 6.2.11.4-14
+- Enabled vdoPrepareForLVM to check read-only devices.
+- Resolves: RHEL-65721
+
 * Wed May 24 2023 - Susan LeGendre-McGhee <slegendr@redhat.com> - 6.2.9.7-14
 - Enhanced vdoPrepareForLVM to repair misaligned conversions.
 - Resolves: rhbz#2182739
