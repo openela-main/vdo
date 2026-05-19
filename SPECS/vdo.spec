@@ -1,6 +1,6 @@
 Summary: Management tools for Virtual Data Optimizer
 Name: vdo
-Version: 8.3.0.72
+Version: 8.3.2.1
 Release: 1%{?dist}
 
 License: GPL-2.0-only
@@ -59,6 +59,7 @@ This package provides the user-space support tools for VDO.
 
 %files
 %license COPYING
+%{_bindir}/vdocalculatesize
 %{_bindir}/vdoforcerebuild
 %{_bindir}/vdoformat
 %{_bindir}/vdostats
@@ -69,6 +70,7 @@ This package provides the user-space support tools for VDO.
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_logicalSpace.pl
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_physicalSpace.pl
 %doc %{_defaultdocdir}/%{name}/examples/monitor/monitor_check_vdostats_savingPercent.pl
+%{_mandir}/man8/vdocalculatesize.8*
 %{_mandir}/man8/vdoforcerebuild.8*
 %{_mandir}/man8/vdoformat.8*
 %{_mandir}/man8/vdostats.8*
@@ -93,13 +95,22 @@ This package provides the user-space support tools for VDO.
 %{_mandir}/man8/vdorecover.8*
 
 %changelog
-* Thu Oct 17 2024 - Chung Chung <cchung@redhat.com> - 8.3.0.72-1
-- Update to 8.3.0.72
-  Resolves: RHEL-62965
+* Wed Nov 19 2025 - Chung Chung <cchung@redhat.com> - 8.3.2.1-1
+- Add vdocalculatesize utility.
+- Improve handling of corrupt index metadata.
+- Resolves: RHEL-129392
 
 * Tue Oct 29 2024 Troy Dawson <tdawson@redhat.com> - 8.3.0.71-2
 - Bump release for October 2024 mass rebuild:
   Resolves: RHEL-64018
+
+* Thu Oct 17 2024 - Chung Chung <cchung@redhat.com> - 8.3.0.72-1
+- Update to 8.3.0.72
+  Resolves: RHEL-62965
+
+* Thu Oct 17 2024 - Chung Chung <cchung@redhat.com> - 8.3.0.72-1
+- Update to 8.3.0.72
+  Resolves: RHEL-62965
 
 * Fri Jun 28 2024 - Susan LeGendre-McGhee <slegendr@redhat.com> - 8.3.0.71-1
 - Import package files from Fedora and update spec for RHEL.
